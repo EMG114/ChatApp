@@ -18,9 +18,24 @@ loginAnonButton.layer.borderWidth = 2.0
     }
     
     @IBAction func loginAnonButtonPressed(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let nav = storyboard.instantiateViewController(withIdentifier: "NavigationVC") as! UINavigationController
+        
+        let appdelegate = UIApplication.shared.delegate as! AppDelegate
+        appdelegate.window?.rootViewController = nav
+        
     }
     
     @IBAction func googleLoginButtonPressed(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let nav = storyboard.instantiateViewController(withIdentifier: "NavigationVC") as! UINavigationController
+        
+        let appdelegate = UIApplication.shared.delegate as! AppDelegate
+        appdelegate.window?.rootViewController = nav
     }
     
 }
